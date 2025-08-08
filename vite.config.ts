@@ -5,17 +5,23 @@ import { cloudflare } from "@cloudflare/vite-plugin";
 import { mochaPlugins } from "@getmocha/vite-plugins";
 
 export default defineConfig({
-  plugins: [...mochaPlugins(process.env as any), react(), cloudflare()],
+  // 👇 ESSA LINHA É A CHAVE PRA VERCEL FUNCIONAR SEM 404
+  base: './',
+
+  plugins: [
+    ...mochaPlugins(process.env as any),
+    react(),
+    cloudflare()
+  ],
+
   server: {
     allowedHosts: true,
   },
+
   build: {
-    outDir: 'dist',
     chunkSizeWarningLimit: 5000,
-    rollupOptions: {
-      input: path.resolve(__dirname, 'index.html'),
-    },
   },
+
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
