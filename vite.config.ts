@@ -1,24 +1,17 @@
 import path from "path";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import { cloudflare } from "@cloudflare/vite-plugin";
-import { mochaPlugins } from "@getmocha/vite-plugins";
 
 export default defineConfig({
-  // 👇 ESSA LINHA É A CHAVE PRA VERCEL FUNCIONAR SEM 404
-  base: '/',
+  // Adiciona a base relativa para garantir que a Vercel encontre os arquivos.
+  base: './',
 
   plugins: [
-    ...mochaPlugins(process.env as any),
-    react(),
-    cloudflare()
+    react()
   ],
 
-  server: {
-    allowedHosts: true,
-  },
-
   build: {
+    // Limita o tamanho do chunk, bom para otimização.
     chunkSizeWarningLimit: 5000,
   },
 
