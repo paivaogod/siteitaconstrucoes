@@ -6,7 +6,7 @@ import { mochaPlugins } from "@getmocha/vite-plugins";
 
 export default defineConfig({
   // 👇 ESSA LINHA É A CHAVE PRA VERCEL FUNCIONAR SEM 404
-  base: './',
+  base: '/',
 
   plugins: [
     ...mochaPlugins(process.env as any),
