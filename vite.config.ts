@@ -5,13 +5,16 @@ import { cloudflare } from "@cloudflare/vite-plugin";
 import { mochaPlugins } from "@getmocha/vite-plugins";
 
 export default defineConfig({
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   plugins: [...mochaPlugins(process.env as any), react(), cloudflare()],
   server: {
     allowedHosts: true,
   },
   build: {
+    outDir: 'dist',
     chunkSizeWarningLimit: 5000,
+    rollupOptions: {
+      input: path.resolve(__dirname, 'index.html'),
+    },
   },
   resolve: {
     alias: {
