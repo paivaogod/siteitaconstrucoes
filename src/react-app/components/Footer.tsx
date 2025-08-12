@@ -33,7 +33,7 @@ export default function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
+              <div className="w-12 h-12 bg-gradient-to-br from-yellow-600 to-yellow-800 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-2xl">C</span>
               </div>
               <h3 className="text-2xl font-bold">ConstrutechPro</h3>
@@ -64,7 +64,7 @@ export default function Footer() {
               <li>
                 <button 
                   onClick={() => scrollToSection('home')}
-                  className="text-gray-300 hover:text-blue-400 transition-colors"
+                  className="text-gray-300 hover:text-yellow-400 transition-colors"
                 >
                   Início
                 </button>
@@ -72,7 +72,7 @@ export default function Footer() {
               <li>
                 <button 
                   onClick={() => scrollToSection('about')}
-                  className="text-gray-300 hover:text-blue-400 transition-colors"
+                  className="text-gray-300 hover:text-yellow-400 transition-colors"
                 >
                   Sobre Nós
                 </button>
@@ -80,7 +80,7 @@ export default function Footer() {
               <li>
                 <button 
                   onClick={() => scrollToSection('services')}
-                  className="text-gray-300 hover:text-blue-400 transition-colors"
+                  className="text-gray-300 hover:text-yellow-400 transition-colors"
                 >
                   Serviços
                 </button>
@@ -88,7 +88,7 @@ export default function Footer() {
               <li>
                 <button 
                   onClick={() => scrollToSection('portfolio')}
-                  className="text-gray-300 hover:text-blue-400 transition-colors"
+                  className="text-gray-300 hover:text-yellow-400 transition-colors"
                 >
                   Portfólio
                 </button>
@@ -115,7 +115,7 @@ export default function Footer() {
             <h4 className="text-lg font-bold mb-6">Contato</h4>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
-                <MapPin size={20} className="text-blue-400 mt-1 flex-shrink-0" />
+                <MapPin size={20} className="text-yellow-400 mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-gray-300">
                     Rua das Construções, 123<br />
@@ -126,15 +126,15 @@ export default function Footer() {
               </div>
               
               <div className="flex items-center space-x-3">
-                <Phone size={20} className="text-blue-400" />
-                <a href="tel:+5511999999999" className="text-gray-300 hover:text-blue-400 transition-colors">
+                <Phone size={20} className="text-yellow-400" />
+                <a href="tel:+5511999999999" className="text-gray-300 hover:text-yellow-400 transition-colors">
                   (11) 99999-9999
                 </a>
               </div>
               
               <div className="flex items-center space-x-3">
-                <Mail size={20} className="text-blue-400" />
-                <a href="mailto:contato@construtechpro.com.br" className="text-gray-300 hover:text-blue-400 transition-colors">
+                <Mail size={20} className="text-yellow-400" />
+                <a href="mailto:contato@construtechpro.com.br" className="text-gray-300 hover:text-yellow-400 transition-colors">
                   contato@construtechpro.com.br
                 </a>
               </div>
@@ -161,10 +161,10 @@ export default function Footer() {
                 © {currentYear} ConstrutechPro. Todos os direitos reservados.
               </p>
               <div className="flex space-x-6 text-sm">
-                <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
+                <a href="#" className="text-gray-400 hover:text-yellow-400 transition-colors">
                   Política de Privacidade
                 </a>
-                <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
+                <a href="#" className="text-gray-400 hover:text-yellow-400 transition-colors">
                   Termos de Uso
                 </a>
               </div>
@@ -173,7 +173,7 @@ export default function Footer() {
             {/* Back to Top */}
             <button
               onClick={scrollToTop}
-              className="flex items-center space-x-2 text-gray-400 hover:text-blue-400 transition-colors"
+              className="flex items-center space-x-2 text-gray-400 hover:text-yellow-400 transition-colors"
             >
               <span className="text-sm">Voltar ao topo</span>
               <ArrowUp size={16} />
