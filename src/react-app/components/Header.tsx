@@ -20,7 +20,7 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
+            <div className="w-10 h-10 bg-gradient-to-br from-yellow-600 to-yellow-800 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-xl">C</span>
             </div>
             <h1 className="text-2xl font-bold text-gray-800">ConstrutechPro</h1>
@@ -28,23 +28,23 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            <button onClick={() => scrollToSection('home')} className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+            <button onClick={() => scrollToSection('home')} className="text-gray-700 hover:text-yellow-600 font-medium transition-colors">
               Início
             </button>
-            <button onClick={() => scrollToSection('about')} className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+            <button onClick={() => scrollToSection('about')} className="text-gray-700 hover:text-yellow-600 font-medium transition-colors">
               Sobre Nós
             </button>
-            <button onClick={() => scrollToSection('services')} className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+            <button onClick={() => scrollToSection('services')} className="text-gray-700 hover:text-yellow-600 font-medium transition-colors">
               Serviços
             </button>
-            <button onClick={() => scrollToSection('portfolio')} className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+            <button onClick={() => scrollToSection('portfolio')} className="text-gray-700 hover:text-yellow-600 font-medium transition-colors">
               Portfólio
             </button>
-            <button onClick={() => scrollToSection('testimonials')} className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+            <button onClick={() => scrollToSection('testimonials')} className="text-gray-700 hover:text-yellow-600 font-medium transition-colors">
               Depoimentos
             </button>
             
-            <button onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+            <button onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-yellow-600 font-medium transition-colors">
               Contato
             </button>
           </nav>
@@ -54,7 +54,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden text-gray-700 hover:text-blue-600"
+            className="lg:hidden text-gray-700 hover:text-yellow-600"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -64,23 +64,23 @@ export default function Header() {
         {isMenuOpen && (
           <nav className="lg:hidden mt-6 pb-4 border-t pt-4">
             <div className="flex flex-col space-y-4">
-              <button onClick={() => scrollToSection('home')} className="text-left text-gray-700 hover:text-blue-600 font-medium">
+              <button onClick={() => scrollToSection('home')} className="text-left text-gray-700 hover:text-yellow-600 font-medium">
                 Início
               </button>
-              <button onClick={() => scrollToSection('about')} className="text-left text-gray-700 hover:text-blue-600 font-medium">
+              <button onClick={() => scrollToSection('about')} className="text-left text-gray-700 hover:text-yellow-600 font-medium">
                 Sobre Nós
               </button>
-              <button onClick={() => scrollToSection('services')} className="text-left text-gray-700 hover:text-blue-600 font-medium">
+              <button onClick={() => scrollToSection('services')} className="text-left text-gray-700 hover:text-yellow-600 font-medium">
                 Serviços
               </button>
-              <button onClick={() => scrollToSection('portfolio')} className="text-left text-gray-700 hover:text-blue-600 font-medium">
+              <button onClick={() => scrollToSection('portfolio')} className="text-left text-gray-700 hover:text-yellow-600 font-medium">
                 Portfólio
               </button>
-              <button onClick={() => scrollToSection('testimonials')} className="text-left text-gray-700 hover:text-blue-600 font-medium">
+              <button onClick={() => scrollToSection('testimonials')} className="text-left text-gray-700 hover:text-yellow-600 font-medium">
                 Depoimentos
               </button>
               
-              <button onClick={() => scrollToSection('contact')} className="text-left text-gray-700 hover:text-blue-600 font-medium">
+              <button onClick={() => scrollToSection('contact')} className="text-left text-gray-700 hover:text-yellow-600 font-medium">
                 Contato
               </button>
               
