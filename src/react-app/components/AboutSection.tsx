@@ -61,7 +61,37 @@ export default function AboutSection() {
             </div>
           </div>
           
-          
+          {/* Right Image */}
+          <div className="relative">
+            <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                alt="Equipe ConstrutechPro trabalhando"
+                className="w-full h-[600px] object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-yellow-900/50 to-transparent"></div>
+            </div>
+            
+            {/* Floating Stats Card */}
+            <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-xl p-6 border">
+              <div className="flex items-center space-x-4">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-yellow-600">30+</div>
+                  <div className="text-sm text-gray-600">Anos</div>
+                </div>
+                <div className="w-px h-12 bg-gray-200"></div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-yellow-600">200+</div>
+                  <div className="text-sm text-gray-600">Projetos</div>
+                </div>
+                <div className="w-px h-12 bg-gray-200"></div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-yellow-600">50+</div>
+                  <div className="text-sm text-gray-600">Profissionais</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
