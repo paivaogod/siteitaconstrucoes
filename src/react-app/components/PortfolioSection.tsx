@@ -78,15 +78,7 @@ export default function PortfolioSection() {
   const currentProject = projects[currentProjectIndex];
   const currentImage = currentProject?.images[currentImageIndex];
 
-  const nextProject = () => {
-    setCurrentProjectIndex((prev) => (prev + 1) % projects.length);
-    setCurrentImageIndex(0);
-  };
-
-  const prevProject = () => {
-    setCurrentProjectIndex((prev) => (prev - 1 + projects.length) % projects.length);
-    setCurrentImageIndex(0);
-  };
+  
 
   const nextImage = () => {
     if (currentProject) {
@@ -114,7 +106,7 @@ export default function PortfolioSection() {
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
             Nosso
-            <span className="text-blue-600"> Portfólio</span>
+            <span className="text-yellow-600"> Portfólio</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Conheça alguns dos nossos projetos mais marcantes e veja a qualidade 
@@ -125,28 +117,10 @@ export default function PortfolioSection() {
         {/* Main Portfolio Display */}
         <div className="max-w-6xl mx-auto">
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-            {/* Project Navigation */}
-            <div className="flex items-center justify-between p-6 border-b">
-              <button
-                onClick={prevProject}
-                className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition-colors"
-              >
-                <ChevronLeft size={20} />
-                <span>Projeto Anterior</span>
-              </button>
-              
-              <div className="text-center">
-                <h3 className="text-2xl font-bold text-gray-800">{currentProject.title}</h3>
-                <p className="text-sm text-gray-500">{currentProjectIndex + 1} de {projects.length}</p>
-              </div>
-              
-              <button
-                onClick={nextProject}
-                className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition-colors"
-              >
-                <span>Próximo Projeto</span>
-                <ChevronRight size={20} />
-              </button>
+            {/* Project Header */}
+            <div className="text-center p-6 border-b">
+              <h3 className="text-2xl font-bold text-gray-800">{currentProject.title}</h3>
+              <p className="text-sm text-gray-500">{currentProjectIndex + 1} de {projects.length}</p>
             </div>
 
             {/* Image Carousel */}
@@ -198,7 +172,7 @@ export default function PortfolioSection() {
                       key={image.id}
                       onClick={() => setCurrentImageIndex(index)}
                       className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-colors ${
-                        index === currentImageIndex ? 'border-blue-600' : 'border-gray-300'
+                        index === currentImageIndex ? 'border-yellow-600' : 'border-gray-300'
                       }`}
                     >
                       <img
@@ -258,7 +232,7 @@ export default function PortfolioSection() {
                 setCurrentImageIndex(0);
               }}
               className={`w-3 h-3 rounded-full transition-colors ${
-                index === currentProjectIndex ? 'bg-blue-600' : 'bg-gray-300'
+                index === currentProjectIndex ? 'bg-yellow-600' : 'bg-gray-300'
               }`}
             />
           ))}
