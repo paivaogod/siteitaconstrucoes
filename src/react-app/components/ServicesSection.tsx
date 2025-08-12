@@ -98,15 +98,6 @@ export default function ServicesSection() {
                   </li>
                 ))}
               </ul>
-
-              {/* CTA Button */}
-              <button
-                onClick={openWhatsApp}
-                className="group-hover:bg-blue-600 group-hover:text-white border-2 border-blue-600 text-blue-600 px-6 py-2 rounded-full font-semibold transition-all duration-300 flex items-center space-x-2 text-sm"
-              >
-                <span>Solicitar Orçamento</span>
-                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-              </button>
             </div>
           ))}
         </div>
