@@ -1,14 +1,19 @@
+import { useState } from 'react';
 import { 
   Home, 
   Building2, 
   Hammer, 
   PaintBucket, 
   Wrench, 
-  HardHat
+  HardHat,
+  ChevronLeft,
+  ChevronRight
 } from 'lucide-react';
 import WhatsAppIcon from '@/react-app/components/WhatsAppIcon';
 
 export default function ServicesSection() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   const services = [
     {
       icon: Home,
@@ -48,9 +53,45 @@ export default function ServicesSection() {
     }
   ];
 
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % services.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev - 1 + services.length) % services.length);
+  };
+
   const openWhatsApp = () => {
     window.open('https://wa.me/5511999999999?text=Olá! Gostaria de saber mais sobre os serviços da ConstrutechPro.', '_blank');
   };
+
+  const ServiceCard = ({ service }: { service: typeof services[0] }) => (
+    <div className="group bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-2xl hover:border-yellow-200 transition-all duration-300 transform hover:-translate-y-2 flex-shrink-0 w-full md:w-auto">
+      {/* Icon */}
+      <div className="w-16 h-16 bg-gradient-to-br from-yellow-100 to-yellow-50 rounded-xl flex items-center justify-center mb-6 group-hover:from-yellow-600 group-hover:to-yellow-700 transition-all duration-300">
+        <service.icon className="w-8 h-8 text-yellow-600 group-hover:text-white transition-colors duration-300" />
+      </div>
+
+      {/* Content */}
+      <h3 className="text-xl font-bold text-gray-800 mb-4 group-hover:text-yellow-600 transition-colors">
+        {service.title}
+      </h3>
+      
+      <p className="text-gray-600 mb-6 leading-relaxed">
+        {service.description}
+      </p>
+
+      {/* Features */}
+      <ul className="space-y-2">
+        {service.features.map((feature, featureIndex) => (
+          <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+            <div className="w-2 h-2 bg-yellow-600 rounded-full mr-3 flex-shrink-0"></div>
+            {feature}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 
   return (
     <section id="services" className="py-20 bg-white">
@@ -67,46 +108,54 @@ export default function ServicesSection() {
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {services.map((service, index) => (
-            <div 
-              key={index}
-              className="group bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-2xl hover:border-yellow-200 transition-all duration-300 transform hover:-translate-y-2"
+        {/* Mobile Carousel */}
+        <div className="md:hidden relative mb-16">
+          <div className="overflow-hidden">
+            <div
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
-              {/* Icon */}
-              <div className="w-16 h-16 bg-gradient-to-br from-yellow-100 to-yellow-50 rounded-xl flex items-center justify-center mb-6 group-hover:from-yellow-600 group-hover:to-yellow-700 transition-all duration-300">
-                <service.icon className="w-8 h-8 text-yellow-600 group-hover:text-white transition-colors duration-300" />
-              </div>
-
-              {/* Content */}
-              <h3 className="text-xl font-bold text-gray-800 mb-4 group-hover:text-yellow-600 transition-colors">
-                {service.title}
-              </h3>
-              
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                {service.description}
-              </p>
-
-              {/* Features */}
-              <ul className="space-y-2 mb-6">
-                {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                    <div className="w-2 h-2 bg-yellow-600 rounded-full mr-3 flex-shrink-0"></div>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-
-              {/* CTA Button */}
-              <button
-                onClick={openWhatsApp}
-                className="group-hover:bg-yellow-600 group-hover:text-white border-2 border-yellow-600 text-yellow-600 px-6 py-2 rounded-full font-semibold transition-all duration-300 flex items-center space-x-2 text-sm"
-              >
-                <span>Solicitar Orçamento</span>
-                
-              </button>
+              {services.map((service, index) => (
+                <div key={index} className="w-full px-4 flex-shrink-0">
+                  <ServiceCard service={service} />
+                </div>
+              ))}
             </div>
+          </div>
+
+          {/* Navigation Buttons */}
+          <button
+            onClick={prevSlide}
+            className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white shadow-lg hover:shadow-xl text-gray-600 hover:text-yellow-600 p-3 rounded-full transition-all duration-300 hover:scale-110 z-10"
+          >
+            <ChevronLeft size={24} />
+          </button>
+
+          <button
+            onClick={nextSlide}
+            className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white shadow-lg hover:shadow-xl text-gray-600 hover:text-yellow-600 p-3 rounded-full transition-all duration-300 hover:scale-110 z-10"
+          >
+            <ChevronRight size={24} />
+          </button>
+
+          {/* Dots Indicator */}
+          <div className="flex justify-center space-x-2 mt-6">
+            {services.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentIndex ? 'bg-yellow-600 scale-125' : 'bg-gray-300 hover:bg-gray-400'
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Desktop Grid */}
+        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {services.map((service, index) => (
+            <ServiceCard key={index} service={service} />
           ))}
         </div>
 
