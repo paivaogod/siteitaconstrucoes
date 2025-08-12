@@ -31,7 +31,7 @@ export default function AboutSection() {
           {/* Left Content */}
           <div>
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
-              Sobre a <span className="block text-yellow-600">ITA</span>
+              <span className="block text-yellow-600">Sobre Nós</span>
             </h2>
             
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
