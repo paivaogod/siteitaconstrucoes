@@ -2,7 +2,7 @@ import WhatsAppIcon from '@/react-app/components/WhatsAppIcon';
 
 export default function HeroSection() {
   const openWhatsApp = () => {
-    window.open('https://wa.me/5511999999999?text=Olá! Gostaria de solicitar um orçamento para meu projeto.', '_blank');
+    window.open('https://wa.me/5524992627220?text=Olá! Gostaria de solicitar um orçamento para meu projeto.', '_blank');
   };
 
   const scrollToPortfolio = () => {
@@ -29,16 +29,11 @@ export default function HeroSection() {
       <div className="relative container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto text-center text-white">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            Construindo o
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600">
-              Futuro
-            </span>
-            com Qualidade
+            Construindo o <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600">Futuro</span>
           </h1>
           
           <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto leading-relaxed">
-            Há mais de 15 anos transformando sonhos em realidade através de projetos de construção civil de alta qualidade, 
-            com tecnologia avançada e compromisso com a excelência.
+            Há mais de 30 anos transformando sonhos em realidade através de projetos de construção civil e reformas de alta qualidade, com compromisso e excelência
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -61,16 +56,16 @@ export default function HeroSection() {
           {/* Stats */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-2xl mx-auto">
             <div className="text-center">
-              <div className="text-4xl font-bold text-yellow-400 mb-2">500+</div>
+              <div className="text-4xl font-bold text-yellow-400 mb-2">200+</div>
               <div className="text-gray-300">Projetos Concluídos</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-yellow-400 mb-2">15+</div>
+              <div className="text-4xl font-bold text-yellow-400 mb-2">30+</div>
               <div className="text-gray-300">Anos de Experiência</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-yellow-400 mb-2">100%</div>
-              <div className="text-gray-300">Clientes Satisfeitos</div>
+              <div className="text-gray-300">Satisfação do Cliente</div>
             </div>
           </div>
         </div>
