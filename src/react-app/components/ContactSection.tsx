@@ -79,13 +79,13 @@ export default function ContactSection() {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900">
+    <section id="contact" className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-yellow-900">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
             Entre em
-            <span className="text-blue-400"> Contato</span>
+            <span className="text-yellow-400"> Contato</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Pronto para começar seu próximo projeto? Nossa equipe está aqui para 
@@ -122,7 +122,7 @@ export default function ContactSection() {
               {contactInfo.map((item, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/15 transition-colors">
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-yellow-600 rounded-lg flex items-center justify-center flex-shrink-0">
                       <item.icon size={24} className="text-white" />
                     </div>
                     <div>
@@ -134,7 +134,7 @@ export default function ContactSection() {
                         <a
                           href={item.action}
                           target={item.action.startsWith('http') ? '_blank' : undefined}
-                          className="text-blue-400 hover:text-blue-300 text-sm mt-2 inline-block transition-colors"
+                          className="text-yellow-400 hover:text-yellow-300 text-sm mt-2 inline-block transition-colors"
                         >
                           {item.action.startsWith('http') ? 'Ver no mapa' : 'Clique para contatar'}
                         </a>
@@ -176,7 +176,7 @@ export default function ContactSection() {
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-colors"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-600 focus:border-transparent transition-colors"
                       placeholder="Seu nome completo"
                     />
                   </div>
@@ -190,7 +190,7 @@ export default function ContactSection() {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-colors"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-600 focus:border-transparent transition-colors"
                       placeholder="seu@email.com"
                     />
                   </div>
@@ -207,7 +207,7 @@ export default function ContactSection() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-colors"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-600 focus:border-transparent transition-colors"
                       placeholder="(11) 99999-9999"
                     />
                   </div>
@@ -220,7 +220,7 @@ export default function ContactSection() {
                       value={formData.subject}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-colors"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-600 focus:border-transparent transition-colors"
                     >
                       <option value="">Selecione o tipo</option>
                       <option value="residencial">Construção Residencial</option>
@@ -244,7 +244,7 @@ export default function ContactSection() {
                     onChange={handleInputChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-colors resize-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-600 focus:border-transparent transition-colors resize-none"
                     placeholder="Descreva seu projeto, necessidades, prazos e outras informações relevantes..."
                   />
                 </div>
@@ -252,7 +252,7 @@ export default function ContactSection() {
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2 text-lg"
+                  className="w-full bg-yellow-600 hover:bg-yellow-700 text-white py-4 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2 text-lg"
                 >
                   <Send size={20} />
                   <span>Enviar Solicitação</span>
