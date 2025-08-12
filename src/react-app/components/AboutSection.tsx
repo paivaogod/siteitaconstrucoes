@@ -5,7 +5,7 @@ export default function AboutSection() {
     {
       icon: Award,
       title: 'Qualidade Garantida',
-      description: 'Certificações e padrões internacionais de qualidade em todos os nossos projetos.'
+      description: 'Nossa experiência e comprometimento garantem a realização do seu projeto exatamente de acordo com o que foi combinado.'
     },
     {
       icon: Users,
@@ -15,7 +15,7 @@ export default function AboutSection() {
     {
       icon: Clock,
       title: 'Prazo Cumprido',
-      description: 'Compromisso com cronogramas e entrega pontual de todos os projetos.'
+      description: 'Compromisso com cronogramas e entregas previamente contratadas.'
     },
     {
       icon: Shield,
@@ -32,17 +32,17 @@ export default function AboutSection() {
           <div>
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
               Sobre a
-              <span className="block text-yellow-600">ConstrutechPro</span>
+              <span className="block text-yellow-600">ITA Construções e Reformas</span>
             </h2>
             
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              Fundada em 2009, a ConstrutechPro é uma empresa líder no segmento de construção civil, 
-              especializada em projetos residenciais, comerciais e industriais de alta complexidade.
+              A ITA Construções e Reformas começou há mais de 30 anos, com apenas com um mestre de obras preocupado com a qualidade máxima de entrega aos seus clientes.
+              Hoje, a ITA é especializada em projetos residenciais e comerciais, tanto de construções quanto de reformas de alta complexidade, contando com uma equipe profissional para atender às suas demandas.
             </p>
             
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
               Nossa missão é transformar ideias em realidade através de soluções inovadoras, 
-              tecnologia avançada e um compromisso inabalável com a qualidade e satisfação dos nossos clientes.
+              que cabem no seu bolso e um compromisso inabalável com a qualidade e satisfação dos nossos clientes.
             </p>
             
             <div className="grid sm:grid-cols-2 gap-6">
