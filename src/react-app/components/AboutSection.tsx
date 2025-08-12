@@ -35,7 +35,7 @@ export default function AboutSection() {
             </h2>
             
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              A ITA Construções e Reformas começou há mais de 30 anos, com apenas com um mestre de obras preocupado com a qualidade máxima de entrega aos seus clientes.
+              A ITA Construções e Reformas começou há mais de 30 anos, nos sonhos de um mestre de obras preocupado com a qualidade máxima de entrega aos seus clientes.
               Hoje, a ITA é especializada em projetos residenciais e comerciais, tanto de construções quanto de reformas de alta complexidade, contando com uma equipe profissional para atender às suas demandas.
             </p>
             
@@ -76,12 +76,12 @@ export default function AboutSection() {
             <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-xl p-6 border">
               <div className="flex items-center space-x-4">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-yellow-600">15+</div>
+                  <div className="text-2xl font-bold text-yellow-600">30+</div>
                   <div className="text-sm text-gray-600">Anos</div>
                 </div>
                 <div className="w-px h-12 bg-gray-200"></div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-yellow-600">500+</div>
+                  <div className="text-2xl font-bold text-yellow-600">200+</div>
                   <div className="text-sm text-gray-600">Projetos</div>
                 </div>
                 <div className="w-px h-12 bg-gray-200"></div>
