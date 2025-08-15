@@ -21,7 +21,9 @@ export default function Header() {
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <div className="w-10 h-10 bg-gradient-to-br from-yellow-600 to-yellow-800 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">C</span>
+              <img
+                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+              />
             </div>
             <h1 className="text-2xl font-bold text-gray-800">ConstrutechPro</h1>
           </div>
