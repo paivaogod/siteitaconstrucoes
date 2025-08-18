@@ -20,7 +20,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-white/95 text-yellow-600">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-6">
         {/* Company Info - Minimal and Centered */}
@@ -33,7 +33,7 @@ export default function Footer() {
             />
             <h3 className="text-base font-bold">ITA Construções e Reformas</h3>
           </div>
-          <p className="text-gray-300 text-sm mb-4">
+          <p className="text-yellow-600 text-sm mb-4">
             Há mais de 30 anos construindo o futuro com qualidade e excelência.
           </p>
           
@@ -43,7 +43,7 @@ export default function Footer() {
               href="https://www.instagram.com/itaconstrucoesreformas/"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-8 h-8 bg-gray-800 hover:bg-pink-600 rounded-full flex items-center justify-center transition-colors"
+              className="w-8 h-8 bg-gray-800 hover:bg-yellow-600 rounded-full flex items-center justify-center transition-colors"
               aria-label="Instagram"
             >
               <Instagram size={16} />
