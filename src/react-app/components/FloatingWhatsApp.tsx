@@ -2,7 +2,7 @@ import WhatsAppIcon from '@/react-app/components/WhatsAppIcon';
 
 export default function FloatingWhatsApp() {
   const openWhatsApp = () => {
-    window.open('https://wa.me/5511999999999?text=Olá! Gostaria de conversar sobre os serviços da ConstrutechPro.', '_blank');
+    window.open('https://wa.me/5524992627220?text=Olá! Gostaria de saber mais sobre os serviços da ITA.', '_blank');
   };
 
   return (
