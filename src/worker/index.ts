@@ -1,7 +1,6 @@
 import { Hono } from "hono";
 import type { Env } from "./types";
 import { zValidator } from '@hono/zod-validator';
-import { Resend } from 'resend';
 import {
   CreatePortfolioProjectSchema,
   CreatePortfolioImageSchema,
@@ -137,58 +136,6 @@ app.post("/api/blog", zValidator('json', CreateBlogPostSchema), async (c) => {
   ).run();
 
   return c.json({ id: result.meta.last_row_id, ...data });
-});
-
-// Contact form endpoint
-app.post("/api/contact", async (c) => {
-  try {
-    const body = await c.req.json();
-    const { name, email, phone, subject, message } = body;
-
-    // Validate required fields
-    if (!name || !email || !subject || !message) {
-      return c.json({ success: false, error: 'Campos obrigatórios não preenchidos' }, 400);
-    }
-
-    // Check if Resend API key is configured
-    if (!c.env.RESEND_API_KEY) {
-      console.error('RESEND_API_KEY not configured');
-      return c.json({ success: false, error: 'Configuração de email não encontrada' }, 500);
-    }
-
-    // Initialize Resend
-    const resend = new Resend(c.env.RESEND_API_KEY);
-
-    // Send email using customer's email as reply-to
-    const emailData = await resend.emails.send({
-      from: 'onboarding@resend.dev',
-      to: ['contato@itaconstrucoes.com.br'],
-      reply_to: email,
-      subject: `Nova solicitação de orçamento - ${subject}`,
-      html: `
-        <h2>Nova Solicitação de Orçamento</h2>
-        <p><strong>Nome:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        ${phone ? `<p><strong>Telefone:</strong> ${phone}</p>` : ''}
-        <p><strong>Tipo de Projeto:</strong> ${subject}</p>
-        <p><strong>Mensagem:</strong></p>
-        <p>${message.replace(/\n/g, '<br>')}</p>
-        
-        <hr>
-        <p><small>Esta mensagem foi enviada através do formulário de contato do site.</small></p>
-      `,
-    });
-
-    if (emailData.error) {
-      console.error('Resend error:', emailData.error);
-      return c.json({ success: false, error: 'Erro ao enviar email', details: emailData.error }, 500);
-    }
-
-    return c.json({ success: true, message: 'Email enviado com sucesso!' });
-  } catch (error) {
-    console.error('Contact form error:', error);
-    return c.json({ success: false, error: 'Erro interno do servidor', details: error.message }, 500);
-  }
 });
 
 export default app;
