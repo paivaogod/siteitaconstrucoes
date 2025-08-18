@@ -66,7 +66,7 @@ export default function AboutSection() {
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
               <img
                 src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                alt="Equipe ConstrutechPro trabalhando"
+                alt="Equipe ITA trabalhando"
                 className="w-full h-[600px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-yellow-900/50 to-transparent"></div>
