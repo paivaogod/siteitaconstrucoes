@@ -62,7 +62,7 @@ export default function ServicesSection() {
   };
 
   const openWhatsApp = () => {
-    window.open('https://wa.me/5511999999999?text=Olá! Gostaria de saber mais sobre os serviços da ConstrutechPro.', '_blank');
+    window.open('https://wa.me/5524992627220?text=Olá! Gostaria de saber mais sobre os serviços da ITA.', '_blank');
   };
 
   const ServiceCard = ({ service }: { service: typeof services[0] }) => (
@@ -173,7 +173,7 @@ export default function ServicesSection() {
               className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-full font-semibold transition-colors inline-flex items-center space-x-2"
             >
               <WhatsAppIcon size={20} />
-              <span>Fale com Nosso Especialista</span>
+              <span>Fale com Nossos Especialistas</span>
             </button>
           </div>
         </div>
