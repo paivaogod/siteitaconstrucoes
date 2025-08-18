@@ -48,27 +48,21 @@ export default function ContactSection() {
 
   const openWhatsApp = () => {
     const message = 'Olá! Gostaria de conversar sobre um projeto de construção.';
-    window.open(`https://wa.me/5511999999999?text=${encodeURIComponent(message)}`, '_blank');
+    window.open(`https://wa.me/5524992627220?text=${encodeURIComponent(message)}`, '_blank');
   };
 
   const contactInfo = [
     {
       icon: Phone,
-      title: 'Telefone',
-      info: '(11) 99999-9999',
-      action: 'tel:+5511999999999'
+      title: 'Celular',
+      info: '(24) 99262-7220',
+      action: 'tel:+5524992627220'
     },
     {
       icon: Mail,
       title: 'E-mail',
-      info: 'contato@construtechpro.com.br',
-      action: 'mailto:contato@construtechpro.com.br'
-    },
-    {
-      icon: MapPin,
-      title: 'Endereço',
-      info: 'Rua das Construções, 123\nVila Madalena, São Paulo - SP',
-      action: 'https://maps.google.com'
+      info: 'contato@itaconstrucoes.com.br',
+      action: 'mailto:contato@itaconstrucoes.com.br'
     },
     {
       icon: Clock,
@@ -84,8 +78,8 @@ export default function ContactSection() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-            Entre em
-            <span className="text-yellow-400"> Contato</span>
+            Solicite seu
+            <span className="text-yellow-400"> Orçamento</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Pronto para começar seu próximo projeto? Nossa equipe está aqui para 
@@ -136,7 +130,6 @@ export default function ContactSection() {
                           target={item.action.startsWith('http') ? '_blank' : undefined}
                           className="text-yellow-400 hover:text-yellow-300 text-sm mt-2 inline-block transition-colors"
                         >
-                          {item.action.startsWith('http') ? 'Ver no mapa' : 'Clique para contatar'}
                         </a>
                       )}
                     </div>
@@ -149,7 +142,7 @@ export default function ContactSection() {
           {/* Contact Form */}
           <div className="bg-white rounded-2xl p-8 shadow-2xl">
             <h3 className="text-2xl font-bold text-gray-800 mb-6">
-              Solicite seu Orçamento
+              Envie sua mensagem
             </h3>
 
             {isSubmitted ? (
