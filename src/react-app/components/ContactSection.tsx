@@ -48,7 +48,7 @@ export default function ContactSection() {
 
   const openWhatsApp = () => {
     const message = 'Olá! Gostaria de conversar sobre um projeto de construção.';
-    window.open(`https://wa.me/24992627220?text=${encodeURIComponent(message)}`, '_blank');
+    window.open(`https://wa.me/5524992627220?text=${encodeURIComponent(message)}`, '_blank');
   };
 
   const contactInfo = [
