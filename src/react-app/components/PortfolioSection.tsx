@@ -94,7 +94,7 @@ export default function PortfolioSection() {
 
   const openWhatsApp = () => {
     const message = `Olá! Gostaria de saber mais sobre o projeto "${currentProject?.title}". Podem me enviar mais detalhes?`;
-    window.open(`https://wa.me/5511999999999?text=${encodeURIComponent(message)}`, '_blank');
+    window.open(`https://wa.me/5524992627220?text=${encodeURIComponent(message)}`, '_blank');
   };
 
   if (!currentProject) return null;
@@ -105,12 +105,11 @@ export default function PortfolioSection() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
-            Nosso
-            <span className="text-yellow-600"> Portfólio</span>
+            Projetos
+            <span className="text-yellow-600"> Concluídos</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Conheça alguns dos nossos projetos mais marcantes e veja a qualidade 
-            que entregamos em cada empreendimento.
+            Alguns dos nossos projetos mais recentes.
           </p>
         </div>
 
@@ -210,7 +209,7 @@ export default function PortfolioSection() {
                     className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-colors inline-flex items-center justify-center space-x-3 mb-4"
                   >
                     <WhatsAppIcon size={24} />
-                    <span>Quero um Projeto Assim</span>
+                    <span>Quero um Projeto assim</span>
                   </button>
                   
                   <p className="text-center text-sm text-gray-500">
