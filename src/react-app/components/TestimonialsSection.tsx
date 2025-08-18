@@ -12,7 +12,7 @@ export default function TestimonialsSection() {
       id: 1,
       client_name: 'Maria Silva Santos',
       client_photo_url: 'https://images.unsplash.com/photo-1494790108755-2616b612b890?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80',
-      testimonial_text: 'A ConstrutechPro superou todas as nossas expectativas. Construíram nossa casa dos sonhos com qualidade excepcional e dentro do prazo. Profissionalismo e atenção aos detalhes impressionantes!',
+      testimonial_text: 'A ITA superou todas as nossas expectativas. Construíram nossa casa dos sonhos com qualidade excepcional e dentro do prazo. Profissionalismo e atenção aos detalhes impressionantes!',
       rating: 5,
       is_featured: true,
       created_at: '2024-01-15',
@@ -32,7 +32,7 @@ export default function TestimonialsSection() {
       id: 3,
       client_name: 'Ana Paula Rodrigues',
       client_photo_url: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80',
-      testimonial_text: 'Excelente empresa! Construíram nosso condomínio com muito cuidado e qualidade. Sempre dispostos a esclarecer dúvidas e fazer ajustes. Trabalho impecável do início ao fim.',
+      testimonial_text: 'Excelente empresa! Sempre dispostos a esclarecer dúvidas e fazer ajustes. Trabalho impecável do início ao fim.',
       rating: 5,
       is_featured: true,
       created_at: '2024-03-05',
@@ -42,7 +42,7 @@ export default function TestimonialsSection() {
       id: 4,
       client_name: 'Roberto Mendes',
       client_photo_url: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80',
-      testimonial_text: 'Profissionais extremamente competentes. Nossa fábrica foi construída seguindo todas as normas técnicas e com acabamento de primeira qualidade. Prazo cumprido rigorosamente.',
+      testimonial_text: 'Profissionais extremamente competentes. Nosso galpão foi construído seguindo todas as normas técnicas e com acabamento de primeira qualidade. Prazo cumprido rigorosamente.',
       rating: 5,
       is_featured: true,
       created_at: '2024-03-20',
@@ -52,7 +52,7 @@ export default function TestimonialsSection() {
       id: 5,
       client_name: 'Fernanda Costa',
       client_photo_url: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80',
-      testimonial_text: 'A melhor decisão foi escolher a ConstrutechPro para nossa obra. Transparência total, comunicação excelente e resultado final além do esperado. Parabéns a toda equipe!',
+      testimonial_text: 'A melhor decisão foi escolher a ITA para nossa obra. Transparência total, comunicação excelente e resultado final além do esperado. Parabéns a toda equipe!',
       rating: 5,
       is_featured: true,
       created_at: '2024-04-10',
@@ -108,12 +108,11 @@ export default function TestimonialsSection() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
-            O que Nossos
-            <span className="text-yellow-600"> Clientes Dizem</span>
+            Clientes comprovam, e
+            <span className="text-yellow-600"> aprovam</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             A satisfação dos nossos clientes é nossa maior conquista. 
-            Veja o que eles têm a dizer sobre nossos serviços.
           </p>
         </div>
 
