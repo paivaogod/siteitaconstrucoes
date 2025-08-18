@@ -138,4 +138,47 @@ app.post("/api/blog", zValidator('json', CreateBlogPostSchema), async (c) => {
   return c.json({ id: result.meta.last_row_id, ...data });
 });
 
+// Contact form endpoint
+app.post("/api/contact", async (c) => {
+  try {
+    const body = await c.req.json();
+    const { name, email, phone, subject, message } = body;
+
+    // Validate required fields
+    if (!name || !email || !subject || !message) {
+      return c.json({ success: false, error: 'Campos obrigatórios não preenchidos' }, 400);
+    }
+
+    // Initialize Resend
+    const resend = new Resend(c.env.RESEND_API_KEY);
+
+    // Send email
+    const emailData = await resend.emails.send({
+      from: 'sistema@itaconstrucoes.com.br',
+      to: ['contato@itaconstrucoes.com.br'],
+      subject: `Nova solicitação de orçamento - ${subject}`,
+      html: `
+        <h2>Nova Solicitação de Orçamento</h2>
+        <p><strong>Nome:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        ${phone ? `<p><strong>Telefone:</strong> ${phone}</p>` : ''}
+        <p><strong>Tipo de Projeto:</strong> ${subject}</p>
+        <p><strong>Mensagem:</strong></p>
+        <p>${message.replace(/\n/g, '<br>')}</p>
+        
+        <hr>
+        <p><small>Esta mensagem foi enviada através do formulário de contato do site.</small></p>
+      `,
+    });
+
+    if (emailData.error) {
+      return c.json({ success: false, error: 'Erro ao enviar email' }, 500);
+    }
+
+    return c.json({ success: true, message: 'Email enviado com sucesso!' });
+  } catch (error) {
+    return c.json({ success: false, error: 'Erro interno do servidor' }, 500);
+  }
+});
+
 export default app;
